@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Alto al Ruido! | Giráldez y Guido</title>
+    <meta name="description" content="Campaña contra la contaminación sonora en Giráldez y Guido. El ruido mata, ¡actuemos ya!">
+    <!-- Favicon SVG del logo -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23FF4757'/><path d='M50 20C30 20 15 35 15 55V75H35V55C35 42.5 42.5 35 55 35C67.5 35 75 42.5 75 55V75H85V55C85 35 70 20 50 20Z' fill='white'/><line x1='20' y1='20' x2='80' y2='80' stroke='white' stroke-width='8'/></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar con nuevo logo SVG -->
+    <nav>
+        <div class="nav-logo">
+            <svg width="32" height="32" viewBox="0 0 200 200" class="logo-svg">
+                <circle cx="100" cy="100" r="90" fill="#FF4757"/>
+                <path d="M100 40C60 40 30 70 30 110V150H70V110C70 85 85 70 110 70C135 70 150 85 150 110V150H170V110C170 70 140 40 100 40Z" fill="white"/>
+                <line x1="40" y1="40" x2="160" y2="160" stroke="white" stroke-width="15"/>
+            </svg>
+            <span>¡Alto al Ruido!<span class="text-accent">Giráldez y Guido</span></span>
+        </div>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#causas">Causas</a></li>
+            <li><a href="#impacto">Impacto</a></li>
+            <li><a href="#ninos">Niños</a></li>
+            <li><a href="#soluciones">Soluciones</a></li>
+            <li><a href="#actua" class="btn-nav">¡Firma Ahora!</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero con video de fondo -->
+    <section id="inicio" class="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-busy-city-traffic-at-night-3577-large.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>EL RUIDO EN <span class="text-accent">GIRÁLDEZ Y GUIDO</span> ESTÁ MATANDO</h1>
+            <p class="hero-subtitle">9 de cada 10 vecinos sufren estrés por contaminación sonora. <strong>¡Es hora de cambiar esto!</strong></p>
+            <div class="hero-buttons">
+                <a href="#impacto" class="btn-primary">Ver Impacto <i class="fas fa-arrow-down"></i></a>
+                <a href="#actua" class="btn-secondary">Unirme a la lucha <i class="fas fa-fist-raised"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Causas -->
+    <section id="causas" class="section">
+        <div class="section-header">
+            <h2>LAS <span class="text-accent">PRINCIPALES FUENTES</span> DE ESTE CAOS</h2>
+            <p class="section-subtitle">Estos son los enemigos que destruyen nuestra tranquilidad:</p>
+        </div>
+        <div class="card-grid">
+            <div class="cause-card">
+                <div class="card-image" style="background-image: url('assets/TRAFFICO FANTASMA.jpg');"></div>
+                <div class="card-content">
+                    <h3><i class="fas fa-car-crash"></i> Tráfico Descontrolado</h3>
+                    <p>Motores rugiendo, bocinas a todo volumen y escapes libres. ¡Niveles de hasta 95 dB en horas pico!</p>
+                    <span class="card-stats">+75% desde 2020</span>
+                </div>
+            </div>
+            <div class="cause-card">
+                <div class="card-image" style="background-image: url('assets/Do You Need ELecTrician SeRvice, DM me!!!24_7 ⚡Electrician electric SerVICE!⚡.jpg');"></div>
+                <div class="card-content">
+                    <h3><i class="fas fa-hammer"></i> Obras 24/7</h3>
+                    <p>Martillos neumáticos a las 4 AM? Aquí pasa. La construcción sin horarios nos roba el sueño.</p>
+                    <span class="card-stats">42 quejas mensuales</span>
+                </div>
+            </div>
+            <div class="cause-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="card-content">
+                    <h3><i class="fas fa-glass-cheers"></i> Vida Nocturna Sin Límites</h3>
+                    <p>Bares que ignoran ordenanzas, música que vibra en las paredes hasta el amanecer.</p>
+                    <span class="card-stats">83 dB promedio</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Impacto -->
+    <section id="impacto" class="impact-section">
+        <div class="impact-overlay"></div>
+        <div class="impact-content">
+            <h2>EL RUIDO <span class="text-accent">TE ESTÁ ENFERMANDO</span></h2>
+            <div class="infographic">
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-heartbeat"></i></div>
+                    <div class="info-text">
+                        <h3 data-target="65">0%</h3>
+                        <p>Vecinos con cortisol elevado</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-bed"></i></div>
+                    <div class="info-text">
+                        <h3 data-target="4">0</h3>
+                        <p>Horas menos de sueño por semana</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-deaf"></i></div>
+                    <div class="info-text">
+                        <h3 data-target="20">0</h3>
+                        <p>De cada 100 con pérdida auditiva</p>
+                    </div>
+                </div>
+            </div>
+            <blockquote>
+                "Vivo aquí hace 20 años. Antes se escuchaban pájaros, ahora solo motos y gritos. Es insoportable."
+                <cite>- Marta R., vecina</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Sección Niños -->
+    <section id="ninos" class="section kids-section">
+        <div class="section-header">
+            <h2>EL RUIDO <span class="text-accent">AFECTA A TUS HIJOS</span></h2>
+            <p class="section-subtitle">Consecuencias científicamente comprobadas del ruido en el desarrollo infantil:</p>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3><i class="fas fa-brain"></i> Desarrollo Cognitivo</h3>
+                    <p>Estudios muestran que niños expuestos a ruido constante tienen un 15% menos de rendimiento escolar.</p>
+                    <span class="timeline-stats" data-target="15">0%</span>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3><i class="fas fa-bed"></i> Trastornos del Sueño</h3>
+                    <p>El 60% de niños en zonas ruidosas presentan problemas para dormir, afectando su crecimiento.</p>
+                    <span class="timeline-stats" data-target="60">0%</span>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3><i class="fas fa-heartbeat"></i> Estrés Infantil</h3>
+                    <p>Niveles de cortisol elevados comparables a niños en situaciones de conflicto familiar.</p>
+                    <span class="timeline-stats" data-target="42">0%</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="kid-facts">
+            <div class="fact-card">
+                <i class="fas fa-volume-up"></i>
+                <p>En escuelas cercanas a calles ruidosas, los niños comprenden un 20% menos lo que leen.</p>
+            </div>
+            <div class="fact-card">
+                <i class="fas fa-heart"></i>
+                <p>Mayor riesgo de hipertensión arterial desde los 8 años en ambientes ruidosos.</p>
+            </div>
+            <div class="fact-card">
+                <i class="fas fa-comment-slash"></i>
+                <p>Retraso en el desarrollo del lenguaje en 1 de cada 3 niños expuestos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Soluciones -->
+    <section id="soluciones" class="section solutions-section">
+        <div class="section-header">
+            <h2><span class="text-accent">SOLUCIONES</span> QUE FUNCIONAN</h2>
+            <p class="section-subtitle">Ciudades como Barcelona redujeron el ruido hasta 30%. ¡Podemos lograrlo!</p>
+        </div>
+        <div class="solution-comparison">
+            <div class="before-after">
+                <div class="before">
+                    <h3>Situación Actual</h3>
+                    <img src="https://images.unsplash.com/photo-1470004914212-05527e49370b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Calle ruidosa">
+                    <ul>
+                        <li><i class="fas fa-times-circle"></i> 90 dB en horas pico</li>
+                        <li><i class="fas fa-times-circle"></i> 0 controles municipales</li>
+                        <li><i class="fas fa-times-circle"></i> Vecinos exhaustos</li>
+                    </ul>
+                </div>
+                <div class="after">
+                    <h3>Propuesta Vecinal</h3>
+                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Calle tranquila">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Límite de 65 dB</li>
+                        <li><i class="fas fa-check-circle"></i> Patrullas acústicas</li>
+                        <li><i class="fas fa-check-circle"></i> Barreras naturales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="actua" class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">¡Firma nuestra petición!</h2>
+            <p>Necesitamos 1,000 firmas para llevar este problema al Concejo Municipal.</p>
+            <form class="signature-form">
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="DNI (opcional)">
+                <button type="submit" class="btn-cta">FIRMAR AHORA <i class="fas fa-pen-fancy"></i></button>
+            </form>
+            <div class="progress-bar">
+                <div class="progress" style="width: 65%;">65%</div>
+            </div>
+            <p class="progress-text">650 firmas de 1,000</p>
+        </div>
+    </section>
+
+    <!-- Footer con logo SVG -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <svg width="40" height="40" viewBox="0 0 200 200">
+                    <circle cx="100" cy="100" r="90" fill="#FF4757"/>
+                    <path d="M100 40C60 40 30 70 30 110V150H70V110C70 85 85 70 110 70C135 70 150 85 150 110V150H170V110C170 70 140 40 100 40Z" fill="white"/>
+                    <line x1="40" y1="40" x2="160" y2="160" stroke="white" stroke-width="15"/>
+                </svg>
+                <span>Giráldez y Guido <span class="text-accent">Sin Ruido</span></span>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Mapa del Ruido</h4>
+                    <a href="#">Zonas críticas</a>
+                    <a href="#">Mediciones en vivo</a>
+                </div>
+                <div class="link-column">
+                    <h4>Recursos</h4>
+                    <a href="#">Estudios científicos</a>
+                    <a href="#">Ordenanzas municipales</a>
+                </div>
+                <div class="link-column">
+                    <h4>Contacto</h4>
+                    <a href="#">prensa@silencioya.org</a>
+                    <a href="#">Tel: 555-1234</a>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com/share/1GuJSNbUai/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/elsilencioquenos?igsh=MW9ldWh5amtqbGlvdQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@el.silencio.que.n?_t=ZM-8xJvuK7sBPB&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Campaña Vecinal Contra el Ruido | Diseñado con <i class="fas fa-heart"></i> para Giráldez y Guido</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
