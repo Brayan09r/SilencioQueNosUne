@@ -9,6 +9,25 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Menú hamburguesa
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.innerHTML = navLinks.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+});
+
+// Cerrar menú al hacer clic en un enlace
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+    });
+});
+
 // Efecto de escritura automática en el hero
 const heroTitle = document.querySelector('.hero-content h1');
 if(heroTitle) {
@@ -151,8 +170,9 @@ document.querySelectorAll('.social-media a').forEach(icon => {
         icon.style.transform = 'scale(1) translateY(0)';
     });
 });
+
 // Formulario funcional con Formspree
-document.querySelector('.signature-form').addEventListener('submit', async (e) => {
+document.querySelector('.signature-form')?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     
