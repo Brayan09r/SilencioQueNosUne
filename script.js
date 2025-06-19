@@ -75,37 +75,53 @@ window.addEventListener('load', () => {
 window.addEventListener('scroll', animateOnScroll);
 
 // Animación para la línea de tiempo
-const animateTimeline = () => {
+function animateTimeline() {
     const timelineItems = document.querySelectorAll('.timeline-item');
-    const screenPosition = window.innerHeight / 1.3;
+    const viewportHeight = window.innerHeight;
     
     timelineItems.forEach((item, index) => {
-        const itemPosition = item.getBoundingClientRect().top;
+        const rect = item.getBoundingClientRect();
+        const isVisible = rect.top < viewportHeight * 0.8;
         
-        if(itemPosition < screenPosition) {
+        if (isVisible && item.style.opacity !== '1') {
+            // Animación escalonada con retraso progresivo
             setTimeout(() => {
                 item.style.opacity = '1';
                 item.style.transform = 'translateY(0)';
-            }, index * 200);
+                item.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            }, index * 150);
         }
     });
-};
+}
+
 
 // Contador animado para estadísticas
 function animateCounters() {
     const counters = document.querySelectorAll('[data-target]');
-    const speed = 200;
+    const animationDuration = 2000; // 2 segundos para completar
     
     counters.forEach(counter => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText.replace(/\D/g, '');
-        const increment = target / speed;
-        
-        if(count < target) {
-            counter.innerText = Math.ceil(count + increment) + (counter.innerText.includes('%') ? '%' : '');
-            setTimeout(animateCounters, 1);
-        } else {
-            counter.innerText = target + (counter.innerText.includes('%') ? '%' : '');
+        // Solo animar si no ha sido animado antes
+        if (!counter.hasAttribute('data-animated')) {
+            counter.setAttribute('data-animated', 'true');
+            
+            const target = parseInt(counter.getAttribute('data-target'));
+            const isPercentage = counter.textContent.includes('%');
+            const start = 0;
+            const increment = target / (animationDuration / 16); // 60fps
+            
+            let current = start;
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.floor(current) + (isPercentage ? '%' : '');
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target + (isPercentage ? '%' : '');
+                }
+            };
+            
+            requestAnimationFrame(updateCounter);
         }
     });
 }

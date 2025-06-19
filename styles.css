@@ -417,15 +417,23 @@ cite {
     color: var(--accent);
 }
 
-/* Sección niños */
+/* Sección niños - Estilos generales */
 .kids-section {
     background: rgba(255, 255, 255, 0.9);
+    padding: 3rem 1rem !important;
 }
 
+/* Timeline container */
+.timeline-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Timeline - Versión móvil */
 .timeline {
     position: relative;
-    max-width: 1000px;
-    margin: 3rem auto;
+    margin: 2rem 0;
 }
 
 .timeline::before {
@@ -435,29 +443,20 @@ cite {
     background-color: var(--accent);
     top: 0;
     bottom: 0;
-    left: 50%;
+    left: 20px;
     margin-left: -2px;
     border-radius: 10px;
 }
 
 .timeline-item {
-    padding: 10px 40px;
+    padding: 0 0 2rem 50px;
     position: relative;
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease-out;
-}
-
-.timeline-item:nth-child(odd) {
-    left: 0;
-    text-align: right;
-}
-
-.timeline-item:nth-child(even) {
-    left: 50%;
 }
 
 .timeline-content {
@@ -477,14 +476,19 @@ cite {
     background: var(--accent);
     border-radius: 50%;
     top: 30px;
-}
-
-.timeline-item:nth-child(odd) .timeline-content::after {
-    right: -10px;
-}
-
-.timeline-item:nth-child(even) .timeline-content::after {
     left: -10px;
+}
+
+.timeline-icon {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
 }
 
 .timeline-stats {
@@ -494,35 +498,111 @@ cite {
     padding: 0.5rem 1rem;
     border-radius: 50px;
     font-weight: 600;
+    margin-top: 0.5rem;
 }
 
+/* Kid facts - Versión móvil */
 .kid-facts {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     max-width: 1000px;
-    margin: 3rem auto;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 .fact-card {
     background: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: var(--transition);
+    transition: all 0.4s ease;
     border: none;
 }
 
-.fact-card i {
-    font-size: 2.5rem;
+.fact-icon {
+    font-size: 2rem;
     color: var(--accent);
     margin-bottom: 1rem;
 }
 
-.fact-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+.fact-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Media queries para tablets */
+@media (min-width: 768px) {
+    .kids-section {
+        padding: 4rem 2rem !important;
+    }
+    
+    .timeline::before {
+        left: 50%;
+    }
+    
+    .timeline-item {
+        padding: 10px 40px;
+        width: 50%;
+    }
+    
+    .timeline-item:nth-child(odd) {
+        left: 0;
+        text-align: right;
+        padding-right: 80px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 50%;
+        padding-left: 80px;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content::after {
+        right: -10px;
+        left: auto;
+    }
+    
+    .kid-facts {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .fact-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Media queries para desktop */
+@media (min-width: 992px) {
+    .kids-section {
+        padding: 6rem 5% !important;
+    }
+    
+    .timeline-item {
+        padding: 10px 40px;
+    }
+    
+    .timeline-item:nth-child(odd) {
+        padding-right: 40px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        padding-left: 40px;
+    }
+    
+    .kid-facts {
+        gap: 2rem;
+    }
+    
+    .fact-card {
+        padding: 2rem;
+    }
+    
+    .fact-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
 }
 
 /* Comparativa antes/después */
