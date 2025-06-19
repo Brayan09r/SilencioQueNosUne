@@ -93,7 +93,52 @@ function animateTimeline() {
         }
     });
 }
+function setupObserver() {
+    const observerOptions = {
+        threshold: 0.3
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Activar todas las animaciones
+                animateTimeline();
+                animateCounters();
+                
+                // Opcional: Animar también las fact-cards si existen
+                const factCards = document.querySelectorAll('.fact-card');
+                if (factCards.length > 0) {
+                    animateFactCards();
+                }
+            }
+        });
+    }, observerOptions);
+    
+    const kidsSection = document.querySelector('#ninos');
+    if (kidsSection) observer.observe(kidsSection);
+}
+// Inicialización al cargar la página
+window.addEventListener('DOMContentLoaded', () => {
+    // Configurar el observador
+    setupObserver();
+    
+    // Preparar elementos para animación
+    const animatedElements = document.querySelectorAll('.timeline-item, .fact-card');
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+    });
+    
+    // Verificar elementos visibles inmediatamente
+    animateTimeline();
+    animateFactCards();
+});
 
+// Evento de scroll para animaciones continuas
+window.addEventListener('scroll', () => {
+    animateTimeline();
+    animateFactCards();
+});
 
 // Contador animado para estadísticas
 function animateCounters() {
